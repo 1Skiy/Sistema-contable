@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Lista de Cuentas</title>
+</head>
+<body>
+  <h1>Lista de Cuentas</h1>
+  <ul>
+    <% cuentas.forEach(function(cuenta) { %>
+      <li>
+        <strong>Nombre:</strong> <%= cuenta.nombre %><br>
+        <strong>Tipo:</strong> <%= cuenta.tipo %><br>
+        <strong>Estado:</strong> <%= cuenta.estado %>
+        <a href="/cuentas/<%= cuenta.nombre %>/eliminar">Eliminar</a> <!-- Enlace para eliminar la cuenta -->
+        <a href="/cuentas/<%= cuenta.nombre %>/editar">Editar</a> <!-- Enlace para editar la cuenta -->
+      </li>
+    <% }) %>
+  </ul>
+  <a href="/cuentas/agregar" class="btn btn-primary">Agregar Cuenta</a> <!-- Botón para agregar cuentas-->
+</body>
+</html>

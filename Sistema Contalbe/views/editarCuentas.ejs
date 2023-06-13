@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Editar Cuenta</title>
+</head>
+<body>
+  <h1>Editar Cuenta</h1>
+  <form method="POST" action=""/cuentas/<%= cuenta.nombre %>/editar">
+    <label for="tipo">Tipo de cuenta:</label>
+    <input type="text" id="tipo" name="tipo" value="<%= cuenta.tipo %>"><br>
+    <label for="estado">Estado de cuenta:</label>
+    <input type="text" id="estado" name="estado" value="<%= cuenta.estado %>"><br>
+    <button type="submit">Guardar cambios</button>
+  </form>
+  <a href="/cuentas">Volver a la lista de cuentas</a>
+</body>
+</html>

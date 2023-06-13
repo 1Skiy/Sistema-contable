@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Lista de Proveedores</title>
+</head>
+<body>
+  <h1>Lista de Proveedores</h1>
+  <ul>
+    <% proveedores.forEach(function(proveedor) { %>
+      <li>
+        <strong>Nombre:</strong> <%= proveedor.nombre %><br>
+        <strong>Direccion:</strong> <%= proveedor.direccion %><br>
+        <strong>Telefono:</strong> <%= proveedor.telefono %>
+      </li>
+    <% }) %>
+  </ul>
+
+  <a href="/proveedores/agregar" class="btn btn-primary">Agregar proveedores</a> <!-- Botón para agregar proveedores -->
+</body>
+</html>

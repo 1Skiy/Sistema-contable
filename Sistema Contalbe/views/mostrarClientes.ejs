@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Lista de Clientes</title>
+</head>
+<body>
+  <h1>Lista de Clientes</h1>
+  <ul>
+    <% clientes.forEach(function(cliente) { %>
+      <li>
+        <strong>Nombre:</strong> <%= cliente.nombre %><br>
+        <strong>Edad:</strong> <%= cliente.edad %><br>
+        <strong>Email:</strong> <%= cliente.email %>
+      </li>
+    <% }) %>
+  </ul>
+
+  <a href="/clientes/agregar" class="btn btn-primary">Agregar Cliente</a> <!-- Botón para agregar clientes -->
+</body>
+</html>

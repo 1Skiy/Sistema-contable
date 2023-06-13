@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Lista de Productos</title>
+</head>
+<body>
+  <h1>Lista de Productos</h1>
+  <ul>
+    <% productos.forEach(function(producto) { %>
+      <li>
+        <strong>Nombre:</strong> <%= producto.nombre %><br>
+        <strong>Precio:</strong> <%= producto.precio %><br>
+        <strong>Stock:</strong> <%= producto.stock %>
+        <a href="/productos/<%= producto.nombre %>/eliminar">Eliminar</a> <!-- Enlace para eliminar el producto -->
+      </li>
+    <% }) %>
+  </ul>
+
+  <a href="/productos/agregar" class="btn btn-primary">Agregar Productos</a> <!-- Botón para agregar productos
+</body>
+</html>

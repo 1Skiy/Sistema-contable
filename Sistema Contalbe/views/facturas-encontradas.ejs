@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Facturas Encontradas</title>
+</head>
+<body>
+  <h1>Facturas Encontradas</h1>
+
+  <% if (facturas.length === 0) { %>
+    <p>No se encontraron facturas para la fecha especificada.</p>
+  <% } else { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Nombre</th>
+          <th>Monto</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% facturas.forEach(factura => { %>
+          <tr>
+            <td><%= factura.fecha %></td>
+            <td><%= factura.nombre %></td>
+            <td><%= factura.monto %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  <% } %>
+
+  <button onclick="location.href='/facturas/agregar'">Agregar Factura</button>
+</body>
+</html>

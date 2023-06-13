@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Cliente</title>
+</head>
+<body>
+    <h1>Agregar Cliente</h1>
+    <form method="POST" action="/clientes/agregar">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" required>
+
+        <label for="edad">Edad:</label>
+        <input type="number" name="edad" id="edad" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+
+        <button type="submit">Agregar Cliente</button>
+    </form>
+</body>
+</html>

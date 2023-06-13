@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Lista de Facturas</title>
+</head>
+<body>
+  <h1>Lista de Facturas</h1>
+  <ul>
+    <% facturas.forEach(function(factura) { %>
+      <li>
+        <strong>Fecha:</strong> <%= factura.fecha %><br>
+        <strong>Monto:</strong> <%= factura.monto %><br>
+        <strong>Nombre:</strong> <%= factura.nombre %>
+        <a href="/facturas/<%= factura.nombre %>/eliminar">Eliminar</a> <!-- Enlace para eliminar la factura -->
+      </li>
+    <% }) %>
+  </ul>
+  <a href="/facturas/agregar" class="btn btn-primary">Agregar o buscar facturas</a> <!-- Botón para agregar facturas
+</body>
+</html>
